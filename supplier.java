@@ -1,14 +1,29 @@
 package com.niit.shoppingcart.model;
 
-public class supplier {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import  javax.persistence.Id;
+import javax.persistence.Table;
+import org.springframework.stereotype.Component;
 
-	private String id;
+@Entity 
+@Table//if table name and domain class name is same,no need to specify
+@Component
+
+public class Supplier{
+	
+	/**id,name,description are the feilds in the table **/
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 	private String name;
 	private String address;
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -23,50 +38,5 @@ public class supplier {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
 }
-	
 
-
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
